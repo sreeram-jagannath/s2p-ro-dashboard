@@ -4,6 +4,7 @@ import folium
 from streamlit_folium import folium_static
 from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode, JsCode
 import math
+import numpy as np
 
 
 st.set_page_config(layout="wide")
@@ -95,6 +96,11 @@ def get_optimal_dc(df):
     df["user_color"] = df["user_input_dc"].map(dc_colors)
     df["optimal_color"] = df["optimal_dc"].map(dc_colors)
 
+    # df["optimal_cost_deviation"] = np.random.rand(130) * 100
+    df["total_orders"] = np.random.randint(low=100, high=1000, size=(130,))
+    df["simulated_cost_deviation"] = np.random.rand(130) * 100
+    df["simulated_cost_deviation"] = df["simulated_cost_deviation"].astype(float).round(1)
+
     rename_cols = {
         "dc": "current_dc",
         "city": "zone",
@@ -183,6 +189,11 @@ if __name__ == "__main__":
         gd2.configure_column(field="zone", header_name="Zone Name", hide=False)
         gd2.configure_column(field="current_dc", header_name="Current DC", hide=False)
         gd2.configure_column(field="optimal_dc", header_name="Optimal DC", hide=False)
+        gd2.configure_column(field="total_orders", header_name="Total Orders", hide=False, editable=True)
+
+        # gd2.configure_column(field="optimal_cost_deviation", header_name="Cost dev.", hide=False)
+        gd2.configure_column(field="simulated_cost_deviation", header_name="Cost Deviation", hide=False)
+
 
         cs = JsCode("""
             function(params){
@@ -205,13 +216,14 @@ if __name__ == "__main__":
         grid_options2 = gd2.build()
 
 
+        # section to add 4 metrics (dummy values)
         col1, col2, col3, col4 = st.columns(4)
         col1.metric("Total Route Changes", 31)
         col2.metric("Current Cost", "$ 1,245")
-        col3.metric("Optimal Cost", "$ 1,100", "-8%", delta_color="inverse")
-        col4.metric("Simulated Cost", "$ 1,200", "-4%", delta_color="inverse")
+        col3.metric("Optimal Cost", "$ 1,380", "6%", delta_color="inverse")
+        col4.metric("Simulated Cost", "$ 1,300", "4%", delta_color="inverse")
 
-        _, opt_col, _ = st.columns([1, 2.5, 1])
+        _, opt_col, _ = st.columns([1, 8, 1])
         with opt_col:
             # st.subheader("Optimal DC", )
             st.markdown("<h2 style='text-align: center; color: black;'>Optimal DC Routes</h2>", unsafe_allow_html=True)
