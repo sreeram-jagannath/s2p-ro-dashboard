@@ -205,10 +205,19 @@ if __name__ == "__main__":
         grid_options2 = gd2.build()
 
 
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Total Route Changes", 31)
+        col2.metric("Current Cost", "$ 1,245")
+        col3.metric("Optimal Cost", "$ 1,100", "-8%", delta_color="inverse")
+        col4.metric("Simulated Cost", "$ 1,200", "-4%", delta_color="inverse")
+
         _, opt_col, _ = st.columns([1, 2.5, 1])
         with opt_col:
             # st.subheader("Optimal DC", )
-            st.markdown("<h2 style='text-align: center; color: black;'>Optimal DC</h2>", unsafe_allow_html=True)
+            st.markdown("<h2 style='text-align: center; color: black;'>Optimal DC Routes</h2>", unsafe_allow_html=True)
+            st.header("")
+            
+            
 
             #Define custom CSS (header cell background color)
             custom_css = {
