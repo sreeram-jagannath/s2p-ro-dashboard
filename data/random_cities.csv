@@ -1,0 +1,131 @@
+city,state_name,lat,lng,dc,color
+Perrysville,Ohio,40.6584,-82.3144,Indy,purple
+Crescent,Oklahoma,35.9518,-97.5948,Fresno,red
+Cascade,Idaho,44.5087,-116.0425,Charlotte,gray
+Chaparrito,Texas,26.3408,-98.7354,Hamburg,orange
+Argonia,Kansas,37.2679,-97.7629,Indy,purple
+Silver Bay,Minnesota,47.2941,-91.278,SLC,blue
+Springville,Utah,40.1638,-111.6205,Hamburg,orange
+St. Clair,Missouri,38.348,-90.9933,Indy,purple
+Cornwall-on-Hudson,New York,41.4369,-74.0145,Charlotte,gray
+Grand Rapids,Minnesota,47.238,-93.5327,Macon,pink
+Des Peres,Missouri,38.5973,-90.448,SLC,blue
+Portage,Pennsylvania,40.3868,-78.6746,Charlotte,gray
+Avoca,Arkansas,36.398,-94.071,Macon,pink
+Washington,Missouri,38.5515,-91.0154,SLC,blue
+Green Valley,Maryland,39.3414,-77.24,Fresno,red
+Bartonville,Texas,33.079,-97.1507,Macon,pink
+Edneyville,North Carolina,35.4025,-82.3372,Hamburg,orange
+Rupert,Pennsylvania,40.976,-76.4797,Olathe,green
+Los Indios,Texas,26.0493,-97.7351,Macon,pink
+Ashland,Missouri,38.7927,-92.2479,Hamburg,orange
+Vina,Alabama,34.3757,-88.0602,Hamburg,orange
+Lakeside,Oregon,43.5795,-124.1733,Indy,purple
+Prairie du Sac,Wisconsin,43.292,-89.7353,Macon,pink
+South Williamson,Kentucky,37.6633,-82.2879,Macon,pink
+Temperance,Michigan,41.7653,-83.5755,Fresno,red
+Gandys Beach,New Jersey,39.2715,-75.2316,Hamburg,orange
+Manzanola,Colorado,38.1088,-103.8668,Macon,pink
+Rolfe,Iowa,42.8129,-94.5313,Macon,pink
+Northvale,New Jersey,41.0101,-73.9505,Hamburg,orange
+Roswell,South Dakota,44.006,-97.6975,Hamburg,orange
+Kenhorst,Pennsylvania,40.3069,-75.9438,SLC,blue
+Townsend,Montana,46.3192,-111.5197,Macon,pink
+Birch Tree,Missouri,36.9967,-91.4916,Charlotte,gray
+Ivanhoe,North Carolina,34.587,-78.2447,Macon,pink
+Whittier,Alaska,60.7852,-148.6455,Olathe,green
+Mount Gilead,Ohio,40.5532,-82.828,Charlotte,gray
+Trail,Minnesota,47.7833,-95.6981,Indy,purple
+Malden,Massachusetts,42.4305,-71.0576,Charlotte,gray
+Cathedral,Colorado,38.0836,-107.0306,Charlotte,gray
+Grey Forest,Texas,29.6171,-98.6835,Indy,purple
+Arion,Iowa,41.9478,-95.4624,Charlotte,gray
+Peachtree Corners,Georgia,33.967,-84.232,Olathe,green
+West St. Paul,Minnesota,44.9018,-93.0858,Olathe,green
+University Gardens,New York,40.7752,-73.7281,Fresno,red
+Marblemount,Washington,48.5418,-121.4397,Hamburg,orange
+Granger,Wyoming,41.5979,-109.9652,Indy,purple
+Gasconade,Missouri,38.6703,-91.56,Fresno,red
+Niantic,Connecticut,41.3258,-72.1952,Macon,pink
+Romulus,Michigan,42.2237,-83.366,Macon,pink
+Williston,Tennessee,35.1585,-89.3754,Olathe,green
+Stites,Idaho,46.0921,-115.9762,Fresno,red
+Millersburg,Pennsylvania,40.5422,-76.9554,Indy,purple
+Millington,Maryland,39.2629,-75.836,Indy,purple
+California,Kentucky,38.9184,-84.2636,Macon,pink
+St. Leon,Indiana,39.2935,-84.9641,Fresno,red
+Power,Montana,47.7203,-111.6944,Indy,purple
+Secor,Illinois,40.7418,-89.135,Macon,pink
+Knik-Fairview,Alaska,61.5082,-149.6252,Indy,purple
+Cliftondale Park,Virginia,37.825,-79.7981,Olathe,green
+Man,West Virginia,37.7522,-81.8923,Olathe,green
+Sierra Brooks,California,39.6426,-120.2155,Hamburg,orange
+Pelican Bay,Florida,26.2327,-81.8108,Indy,purple
+Cope,South Carolina,33.3777,-81.0079,Charlotte,gray
+Parker School,Montana,48.2468,-109.7341,Fresno,red
+Thompsonville,Texas,27.2601,-98.7847,Charlotte,gray
+Hill City,Kansas,39.367,-99.846,Fresno,red
+Freedom,California,36.9403,-121.7953,Fresno,red
+Hot Springs,South Dakota,43.4195,-103.4657,SLC,blue
+Cheriton,Virginia,37.2919,-75.9678,SLC,blue
+Hampton,Maryland,39.4237,-76.5685,Indy,purple
+Roslyn,Pennsylvania,40.1311,-75.1374,Fresno,red
+Hustisford,Wisconsin,43.3441,-88.6031,Macon,pink
+Delmont,New Jersey,39.2152,-74.9494,Olathe,green
+Crystal River,Florida,28.8964,-82.5991,Fresno,red
+Harpers Ferry,Iowa,43.2006,-91.1522,Fresno,red
+Rothsay,Minnesota,46.4731,-96.2842,SLC,blue
+Falls Mills,Virginia,37.2773,-81.3067,Charlotte,gray
+Woodburn,Oregon,45.1472,-122.8603,SLC,blue
+Marshville,North Carolina,34.9865,-80.3685,Charlotte,gray
+Granite,Oregon,44.81,-118.4187,SLC,blue
+Oxford,North Carolina,36.3155,-78.5848,Macon,pink
+Huntersville,North Carolina,35.406,-80.8716,Charlotte,gray
+Bryant,South Dakota,44.5899,-97.4673,Hamburg,orange
+Martinsburg,West Virginia,39.4582,-77.9776,Macon,pink
+St. Cloud,Missouri,38.1732,-91.2127,Olathe,green
+Decatur,Tennessee,35.529,-84.7933,Hamburg,orange
+Bennington,Nebraska,41.3682,-96.1616,SLC,blue
+Twin Bridges,Montana,45.5429,-112.3341,Olathe,green
+Bigfoot,Texas,29.0619,-98.8521,Olathe,green
+Brecon,Ohio,39.2798,-84.3531,SLC,blue
+Kenwood,Ohio,39.2066,-84.375,Olathe,green
+Winchester,Kansas,39.3226,-95.2688,Fresno,red
+Woodway,Washington,47.7904,-122.3851,Olathe,green
+Kenwood,California,38.4153,-122.5387,Fresno,red
+South Bend,Washington,46.6678,-123.8006,Indy,purple
+Sierraville,California,39.575,-120.3637,Charlotte,gray
+Fairview,Tennessee,35.9815,-87.1291,Hamburg,orange
+Onarga,Illinois,40.7153,-88.0108,Olathe,green
+St. Paul Park,Minnesota,44.8359,-92.9949,Fresno,red
+Reserve,Wisconsin,45.8337,-91.3545,Charlotte,gray
+Long Lake Colony,South Dakota,45.604,-98.8253,Macon,pink
+Murrells Inlet,South Carolina,33.556,-79.0594,Olathe,green
+Westford,New York,42.6511,-74.8005,SLC,blue
+Fort Davis,Texas,30.5789,-103.8946,Indy,purple
+Sand Coulee,Montana,47.4024,-111.1726,Hamburg,orange
+Washington,Utah,37.1303,-113.4878,Macon,pink
+Freeburg,Pennsylvania,40.7625,-76.9408,Olathe,green
+Shelton,Nebraska,40.7784,-98.7294,Fresno,red
+Olar,South Carolina,33.1799,-81.1854,Olathe,green
+Timblin,Pennsylvania,40.9673,-79.199,Olathe,green
+Pump Back,Oklahoma,36.2707,-95.1178,Macon,pink
+Tignall,Georgia,33.8674,-82.742,Macon,pink
+Excel,Alabama,31.4264,-87.3433,Fresno,red
+Riviera Beach,Maryland,39.1623,-76.5257,Olathe,green
+Ovid,Michigan,43.0031,-84.3742,Olathe,green
+Old Brookville,New York,40.8332,-73.604,SLC,blue
+Tennessee Ridge,Tennessee,36.3194,-87.7631,Fresno,red
+Folsom,New Jersey,39.5929,-74.8424,Hamburg,orange
+Kennedy,Minnesota,48.6441,-96.9106,Indy,purple
+Sadsburyville,Pennsylvania,39.983,-75.8937,Macon,pink
+Sprague,West Virginia,37.7938,-81.1822,Charlotte,gray
+Bassett,Iowa,43.0617,-92.5153,SLC,blue
+Jacksonville,Florida,30.3322,-81.6749,Macon,pink
+Camano,Washington,48.1865,-122.4708,Fresno,red
+San Ysidro,New Mexico,32.3568,-106.8129,Hamburg,orange
+Goodrich,Texas,30.6092,-94.9467,Charlotte,gray
+Carefree,Arizona,33.8234,-111.9161,Indy,purple
+Kremlin,Montana,48.5707,-110.0862,SLC,blue
+Owosso,Michigan,42.9955,-84.176,SLC,blue
+Williamstown,New Jersey,39.6874,-74.9786,Charlotte,gray

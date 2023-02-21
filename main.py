@@ -13,7 +13,7 @@ st.set_page_config(layout="wide")
 def get_random_cities_list():
     # Load random city data
     # to generate new random cities, run the notebook "select_cities.ipynb"
-    random_cities = pd.read_csv("../data/random_cities.csv")
+    random_cities = pd.read_csv("./data/random_cities.csv")
     random_cities_list = random_cities.filter(["city", "lat", "lng", "color"]).values.tolist()
     return random_cities, random_cities_list
 
@@ -25,7 +25,7 @@ def get_folium_map():
 
     # Add choropleth to the map
     folium.Choropleth(
-        geo_data='../data/us-state-boundaries.geojson',
+        geo_data='./data/us-state-boundaries.geojson',
         line_opacity=0.8,
         fill_color="yellow",
         fill_opacity=0.1,
