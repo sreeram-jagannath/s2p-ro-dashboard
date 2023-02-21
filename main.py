@@ -159,78 +159,30 @@ if __name__ == "__main__":
         ],
     }
 
-    # _, col1, col2, _ = st.columns(4)
-    # with col1:
-    #     st.subheader("DC capacity")
-    #     # create aggrid component
-    #     grid_return = AgGrid(dc_capacity, grid_options, fit_columns_on_grid_load=True)
-    #     new_df = grid_return["data"]
+    with st.sidebar:
+        st.subheader("DC capacity")
+        # create aggrid component
+        grid_return = AgGrid(dc_capacity, grid_options, fit_columns_on_grid_load=True)
+        new_df = grid_return["data"]
 
-    # with col2:
-    #     # st.title("")
-    #     st.subheader("Customer SLA")
-    #     customer_sla_days = st.number_input(label="No. of days", value=2)
+        # st.subheader("")
+        st.subheader("Customer SLA")
+        customer_sla_days = st.number_input(label="No. of days", value=2)
 
     # _, button_col, _ = st.columns([2.5, 2, 1])
     # optimize_button = button_col.button(label="Optimize", on_click=get_optimal_dc, args=(random_cities, ))
-
-    st.sidebar.subheader("DC Capacities")
-    dc1_cap = st.sidebar.number_input(label="Frenco", value=5000)
-    dc2_cap = st.sidebar.number_input(label="SLC", value=100)
-    dc3_cap = st.sidebar.number_input(label="Olathe", value=150)
-    dc4_cap = st.sidebar.number_input(label="Indy", value=2000)
-    dc5_cap = st.sidebar.number_input(label="Hamburg", value=300)
-    dc6_cap = st.sidebar.number_input(label="Macon", value=800)
-    dc6_cap = st.sidebar.number_input(label="Charlotte", value=10)
-
-    st.sidebar.subheader("Customer SLA (Days)")
-    days = st.sidebar.number_input(label="Days", value=2)
 
     st.sidebar.button(label="Optimize", on_click=get_optimal_dc, args=(random_cities, ))
 
     if st.session_state.get("optimal_dc_df", None) is not None:
     # if optimize_button:
         optimal_df = st.session_state["optimal_dc_df"]
-
-        grid_options2 = {
-            "defaultColDef": {
-                "minWidth": 5,
-                "editable": False,
-                "height": 200,
-                "scrollable": True,
-                "sortable": True,
-            },
-            "columnDefs": [
-                {
-                    "headerName": "Zone Name",
-                    "field": "zone",
-                    # "width": 120,
-                },
-                {
-                    "headerName": "Current DC",
-                    "field": "current_dc",
-                    "width": 150,
-                },
-                {
-                    "headerName": "Optimal DC",
-                    "field": "optimal_dc",
-                    "width": 150,
-                },
-                {
-                    "headerName": "User Input DC",
-                    "field": "user_input_dc",
-                    "editable": True,
-                    "width": 150,
-                },
-            ],
-        }
-
         
         gd2 = GridOptionsBuilder.from_dataframe(optimal_df)
         gd2.configure_default_column(hide=True, editable=False)
-        gd2.configure_column(field="zone", header_name="Zone Name", hide=False, width=170)
-        gd2.configure_column(field="current_dc", header_name="Current DC", hide=False, width=150)
-        gd2.configure_column(field="optimal_dc", header_name="Optimal DC", hide=False, width=150)
+        gd2.configure_column(field="zone", header_name="Zone Name", hide=False)
+        gd2.configure_column(field="current_dc", header_name="Current DC", hide=False)
+        gd2.configure_column(field="optimal_dc", header_name="Optimal DC", hide=False)
 
         cs = JsCode("""
             function(params){
@@ -241,16 +193,24 @@ if __name__ == "__main__":
                 }
             };
         """)
-        gd2.configure_column(field="user_input_dc", header_name="User Input DC", editable=True, cellStyle=cs, hide=False)
+        gd2.configure_column(
+            field="user_input_dc", 
+            header_name="User Input DC", 
+            editable=True, 
+            cellStyle=cs, 
+            hide=False,
+            cellEditor="agSelectCellEditor",
+            cellEditorParams={"values": ['Fresno', 'SLC', 'Olathe', 'Indy', 'Hamburg', 'Macon', 'Charlotte'] }
+        )
         grid_options2 = gd2.build()
 
 
-        _, opt_col, _ = st.columns([1, 2, 1])
+        _, opt_col, _ = st.columns([1, 2.5, 1])
         with opt_col:
             # st.subheader("Optimal DC", )
             st.markdown("<h2 style='text-align: center; color: black;'>Optimal DC</h2>", unsafe_allow_html=True)
 
-            #Define custom CSS
+            #Define custom CSS (header cell background color)
             custom_css = {
                 ".ag-header-cell-label": {"background-color": "gray !important"}
             }
@@ -262,6 +222,7 @@ if __name__ == "__main__":
                 allow_unsafe_jscode=True,
                 fit_columns_on_grid_load=True,  
                 theme="alpine",
+                # custome_css=custom_css,
             )["data"]
 
         optimal_df2["user_color"] = optimal_df2["user_input_dc"].map(dc_colors)
