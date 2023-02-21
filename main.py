@@ -36,6 +36,7 @@ def get_folium_map():
         folium.Marker(
             [lat, long], 
             popup=dc_name, 
+            tooltip=dc_name,
             icon=folium.map.Icon(
                 color=dc_colors.get(dc_name), 
                 icon="industry",
