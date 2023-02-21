@@ -32,6 +32,17 @@ def get_folium_map():
         highlight=True
     ).add_to(m)
 
+    for dc_name, (lat, long) in dc_lat_lng.items():
+        folium.Marker(
+            [lat, long], 
+            popup=dc_name, 
+            icon=folium.map.Icon(
+                color=dc_colors.get(dc_name), 
+                icon="industry",
+                prefix="fa",
+            ),
+        ).add_to(m)
+
     # plot all the cities
     if "optimal_dc_df" not in st.session_state:
         for city, lat, long, clr in random_cities_list:
@@ -41,7 +52,7 @@ def get_folium_map():
                 fill=True,
                 fill_color=clr,
                 color=False,
-                fill_opacity=0.5,
+                fill_opacity=0.3,
                 tooltip=city,
             ).add_to(m)
     
@@ -230,8 +241,7 @@ if __name__ == "__main__":
             st.header("")
             
             
-
-            #Define custom CSS (header cell background color)
+            #Define custom CSS (header cell background color) (not looking good)
             custom_css = {
                 ".ag-header-cell-label": {"background-color": "gray !important"}
             }
