@@ -139,7 +139,7 @@ if __name__ == "__main__":
     })
 
     # Display map in Streamlit app
-    folium_static(us_map, width=1500)
+    folium_static(us_map, width=1200)
 
     grid_options = {
         "defaultColDef": {
@@ -159,20 +159,34 @@ if __name__ == "__main__":
         ],
     }
 
-    _, col1, col2, _ = st.columns(4)
-    with col1:
-        st.subheader("DC capacity")
-        # create aggrid component
-        grid_return = AgGrid(dc_capacity, grid_options, fit_columns_on_grid_load=True)
-        new_df = grid_return["data"]
+    # _, col1, col2, _ = st.columns(4)
+    # with col1:
+    #     st.subheader("DC capacity")
+    #     # create aggrid component
+    #     grid_return = AgGrid(dc_capacity, grid_options, fit_columns_on_grid_load=True)
+    #     new_df = grid_return["data"]
 
-    with col2:
-        # st.title("")
-        st.subheader("Customer SLA")
-        customer_sla_days = st.number_input(label="No. of days", value=2)
+    # with col2:
+    #     # st.title("")
+    #     st.subheader("Customer SLA")
+    #     customer_sla_days = st.number_input(label="No. of days", value=2)
 
-    _, button_col, _ = st.columns([2.5, 2, 1])
-    optimize_button = button_col.button(label="Optimize", on_click=get_optimal_dc, args=(random_cities, ))
+    # _, button_col, _ = st.columns([2.5, 2, 1])
+    # optimize_button = button_col.button(label="Optimize", on_click=get_optimal_dc, args=(random_cities, ))
+
+    st.sidebar.subheader("DC Capacities")
+    dc1_cap = st.sidebar.number_input(label="Frenco", value=5000)
+    dc2_cap = st.sidebar.number_input(label="SLC", value=100)
+    dc3_cap = st.sidebar.number_input(label="Olathe", value=150)
+    dc4_cap = st.sidebar.number_input(label="Indy", value=2000)
+    dc5_cap = st.sidebar.number_input(label="Hamburg", value=300)
+    dc6_cap = st.sidebar.number_input(label="Macon", value=800)
+    dc6_cap = st.sidebar.number_input(label="Charlotte", value=10)
+
+    st.sidebar.subheader("Customer SLA (Days)")
+    days = st.sidebar.number_input(label="Days", value=2)
+
+    st.sidebar.button(label="Optimize", on_click=get_optimal_dc, args=(random_cities, ))
 
     if st.session_state.get("optimal_dc_df", None) is not None:
     # if optimize_button:
